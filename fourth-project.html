@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link href="css/bootstrap.css" rel="stylesheet" type="text/css">
+    <link href="css/styles.css" rel="stylesheet" type="text/css">
+    <script src="js/jquery-3.3.1.min.js"></script>
+    <script src="js/scripts.js"></script>
+    <title>Fourth Independent Project</title>
+  </head>
+  <body>
+    <div class="container">
+      <h1>What sort of vacation do you want?</h1>
+
+      <form class='form-group' id="infoinput">
+        <div class="question1">
+          <label>What sort of place would you like to visit</label>
+          <select id="whatsortofplace">
+            <option>Tropical</option>
+            <option>Temperate</option>
+          </select>
+          <p class='q1next'>Next</p>
+        </div>
+        <div class="question2">
+          <label>What would you like to do there?</label>
+          <select id="whatwouldyoudo">
+            <option>I would like to explore.</option>
+            <option>I would like to relax.</option>
+          </select>
+          <p class='q2next'>Next</p>
+        </div>
+        <div class="question3">
+          <label>Would you like to fly international?</label>
+          <select id="flyinternational">
+            <option>Yes.</option>
+            <option>No.</option>
+          </select>
+          <p class='q3next'>Next</p>
+        </div>
+        <div class="question4">
+          <label>Would you like to visit in summer or winter?</label>
+          <select id="summerorwinter">
+            <option>Summer.</option>
+            <option>Winter.</option>
+          </select>
+          <p class='q4next'>Next</p>
+        </div>
+
+
+        <div class="results">
+            <div id='resultdata'>
+              <p>Here are your results!</p>
+            </div>
+        </div>
+
+        <button type="submit" class="btn submitform">Results</button>
+        </form>
+
+      </div>
+
+      <div class="output">
+        <p>Our data here indicates what place you would most enjoy vacationing at!</p>
+        <ul>
+          <li class= "florida">Florida: </li>
+          <li class= "spain">Spain: </li>
+          <li class= "norway">Norway: </li>
+          <li class= "japan">Japan: </li>
+        </ul>
+      </div>
+
+    </body>
+  </html>
