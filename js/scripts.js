@@ -1,7 +1,8 @@
-var florida = 0;
-var spain = 0;
-var norway = 0;
-var japan = 0;
+
+var java = 0;
+var ruby = 0;
+var python = 0;
+var csharp = 0;
 
 $(document).ready(function() {
   $(".question1").show();
@@ -30,70 +31,76 @@ $(document).ready(function() {
 
   $("form#infoinput").submit(function(event) {
     event.preventDefault();
-    var questionone = $("select#whatsortofplace").val();
-    var questiontwo = $("select#whatwouldyoudo").val();
-    var questionthree = $("select#flyinternational").val();
-    var questionfour = $("select#summerorwinter").val();
+    $("#infoinput").hide();
+    var questionone = $("select#easyornot").val();
+    var questiontwo = $("select#frontorback").val();
+    var questionthree = $("select#mobile").val();
+    var questionfour = $("select#science").val();
 
-    if (questionone === 'tropical') {
-      florida++;
-      spain++;
+    if (questionone === 'Yes.') {
+      ruby++;
     }
 
-    else if (questionone === 'temperate') {
-      norway++;
-      japan++;
+    else if (questionone === 'No.') {
+      java++
     }
 
     console.log(questionone);
 
-    if (questiontwo === 'I would like to explore.') {
-      norway++;
-      spain++;
-      japan++;
+    if (questiontwo === 'Front End.') {
+      java++;
+      ruby++;
+      python++;
+      csharp++;
     }
 
-    else if (questiontwo === 'I would like to relax.') {
-      florida++;
-      norway++;
+    else if (questiontwo === 'Back End.') {
+      ruby++;
+      python++;
+      csharp++;
     }
 
     if (questionthree === 'Yes.') {
-      spain++;
-      norway++;
-      japan++;
+      java++;
+      python++;
     }
 
     else if (questionthree === 'No.') {
-      florida++;
+      ruby++;
+      csharp++;
     }
 
-    if (questionfour === 'Summer.') {
-      norway++;
-      japan++;
-
+    if (questionfour === 'Yes.') {
+      python++;
+      csharp++;
     }
 
-    else if (questionfour === 'Winter.') {
-      florida++;
-      spain++;
+    else if (questionfour === 'No.') {
+      java++;
+      ruby++;
     }
+    console.log(java, ruby, python, csharp);
 
     $('#resultdata').show();
 
-
-    console.log(norway);
-
-
-
     $('.output').show();
 
-    $(".florida").append(florida);
-    $(".spain").append(spain);
-    $(".norway").append(norway);
-    $(".japan").append(japan);
+    if (ruby > java && ruby > python && ruby > csharp) {
+      $('.ruby').show();
+    }
+
+    if (java > ruby && java > python && java > csharp) {
+      $('.java').show();
+    }
+
+    if (python > ruby && python > java && python > csharp); {
+      $('.python').show();
+    }
+
+    if (csharp > ruby && csharp > java && csharp > python) {
+      $('.csharp').show();
+    }
 
 
-    $(".submitform").hide();
   });
 });

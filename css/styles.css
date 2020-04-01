@@ -1,31 +1,30 @@
-.question1, .question2, .question3, .question4, .results, .output, .submitform {
- display: none;
-}
 
+.question1, .question2, .question3, .question4, .results, .output, .submitform, .java, .ruby, .python, .csharp {
+  display: none;
+}
 
 h1 {
- color: blue;
- text-align: center;
- font-weight: bold;
+  color: blue;
+  text-align: center;
+  font-weight: bold;
 }
 
-
 p {
- font-family: sans-serif;
- line-height: 30px;
+  font-family: sans-serif;
+  line-height: 30px;
 
 }
 
 
 ul {
- font-size: 20px;
- line-height: 30px;
- text-align: left;
+  font-size: 20px;
+  line-height: 30px;
+  text-align: left;
 }
 
 .container {
- margin: 0 auto;
- border: 2px solid green;
- padding: 4px;
- text-align: center;
+  margin: 0 auto;
+  border: 2px solid green;
+  padding: 4px;
+  text-align: center;
 }
