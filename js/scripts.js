@@ -1,5 +1,5 @@
 
-var java = 0;
+var javascript = 0;
 var ruby = 0;
 var python = 0;
 var csharp = 0;
@@ -39,33 +39,25 @@ $(document).ready(function() {
 
     if (questionone === 'Yes.') {
       ruby++;
+    } else if (questionone === 'No.') {
+      javascript++
     }
-
-    else if (questionone === 'No.') {
-      java++
-    }
-
-    console.log(questionone);
 
     if (questiontwo === 'Front End.') {
-      java++;
+      javascript++;
       ruby++;
       python++;
       csharp++;
-    }
-
-    else if (questiontwo === 'Back End.') {
+    } else if (questiontwo === 'Back End.') {
       ruby++;
       python++;
       csharp++;
     }
 
     if (questionthree === 'Yes.') {
-      java++;
+      javascript++;
       python++;
-    }
-
-    else if (questionthree === 'No.') {
+    } else if (questionthree === 'No.') {
       ruby++;
       csharp++;
     }
@@ -73,31 +65,28 @@ $(document).ready(function() {
     if (questionfour === 'Yes.') {
       python++;
       csharp++;
-    }
-
-    else if (questionfour === 'No.') {
-      java++;
+    } else if (questionfour === 'No.') {
+      javascript++;
       ruby++;
     }
-    console.log(java, ruby, python, csharp);
 
     $('#resultdata').show();
 
     $('.output').show();
 
-    if (ruby > java && ruby > python && ruby > csharp) {
+    if (ruby > javascript && ruby > python && ruby > csharp) {
       $('.ruby').show();
     }
 
-    if (java > ruby && java > python && java > csharp) {
-      $('.java').show();
+    if (javascript > ruby && javascript > python && java > csharp) {
+      $('.javascript').show();
     }
 
-    if (python > ruby && python > java && python > csharp); {
+    if (python > ruby && python > javascript && python > csharp) {
       $('.python').show();
     }
 
-    if (csharp > ruby && csharp > java && csharp > python) {
+    if (csharp > ruby && csharp > javascript && csharp > python) {
       $('.csharp').show();
     }
 
